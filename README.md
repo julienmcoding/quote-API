@@ -1,3 +1,5 @@
+![](https://github.com/julienmcoding/quote-API/blob/main/quote-API.PNG)
+
 # The quote API
 A Codecademy Express.js challenge.
 
@@ -23,7 +25,7 @@ To run the server, be sure to have node installed:
 ```
 node server.js
 ```
-And visit localhost:4001 in your browser to interact with the front-end.
+And visit **localhost:4001** in your browser to interact with the front-end.
 
 ## Source
 This project was created by Codecademy for the Back-End engineer path. 
