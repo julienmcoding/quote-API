@@ -63,5 +63,15 @@ button:hover {
 }
 
 .quote-text {
+  font-size: 1.3em;
+}
+
+.quote-id {
+  color: black;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.attribution {
   font-style: italic;
 }

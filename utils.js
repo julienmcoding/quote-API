@@ -7,13 +7,15 @@ const getRandomElement = arr => {
 
 const createElement = (elementType, queryArguments) => {
   if (queryArguments.hasOwnProperty('quote') &&
-      queryArguments.hasOwnProperty('person')) {
+      queryArguments.hasOwnProperty('person') &&
+      queryArguments.hasOwnProperty('year')) {
         quoteIdCounter += 1;
         let currentId = quoteIdCounter;
     return {
       'id': currentId,
       'quote': queryArguments.quote,
       'person':  queryArguments.person,
+      'year': queryArguments.year
     };
   } else {
     return false;

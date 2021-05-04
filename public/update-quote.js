@@ -1,24 +1,26 @@
 const submitButton = document.getElementById('submit-quote');
-const updateQuoteContainer = document.getElementById('update-quote');
+const newQuoteContainer = document.getElementById('update-quote');
 
 submitButton.addEventListener('click', () => {
   const id = document.getElementById('id').value;
   const quote = document.getElementById('quote').value;
   const person = document.getElementById('person').value;
+  const year = document.getElementById('year').value;
 
-  fetch(`/api/quotes/${id}?quote=${quote}&person=${person}`, {
+  fetch(`/api/quotes/${id}?quote=${quote}&person=${person}&year=${year}`, {
     method: 'PUT',
   })
   .then(response => response.json())
   .then(({quote}) => {
-    const updateQuote = document.createElement('div');
-    updateQuote.innerHTML = `
+    const newQuote = document.createElement('div');
+    newQuote.innerHTML = `
     <h3>Congrats, your quote was updated!</h3>
-    <div class="quote-id">${quote.id}</div>
+    <div class="quote-id">~ ${quote.id} ~</div>
     <div class="quote-text">${quote.quote}</div>
-    <div class="attribution">- ${quote.person}</div>
+    <div class="attribution"> ${quote.person}</div>
+    <div class="year">- ${quote.year}-</div>
     <p>Go to the <a href="index.html">home page</a> to request and view all quotes.</p>
     `
-    updateQuoteContainer.appendChild(updateQuote);
+    newQuoteContainer.appendChild(newQuote);
   });
 });
